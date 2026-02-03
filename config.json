@@ -1,0 +1,40 @@
+{
+    "dpdk": {
+        "port_id": 0,
+        "queue_id": 0,
+        "eal_args": [
+            "-l",
+            "14",
+            "-a",
+            "0000:09:00.0",
+            "--socket-mem=1024,0"
+        ]
+    },
+    "network": {
+        "udp_port": 12345
+    },
+    "shared_memory": {
+        "name": "gateway",
+        "ring_size": 16384
+    },
+    "cpu": {
+        "core_id": 14,
+        "isolate_cores": "14-15",
+        "governor": "performance"
+    },
+    "warmup": {
+        "enabled": true,
+        "synthetic_packets": 1000,
+        "cache_touch": true
+    },
+    "benchmark": {
+        "enabled": false,
+        "stats_interval_seconds": 5
+    },
+    "comments": {
+        "port_id": "DPDK port ID (use dpdk-devbind.py --status to see available ports)",
+        "eal_args": "DPDK EAL arguments: -l cores, -a PCI address, --socket-mem NUMA allocation",
+        "core_id": "CPU core for the polling loop (use isolated cores for best performance)",
+        "isolate_cores": "Add to kernel cmdline: isolcpus=14-15 nohz_full=14-15 rcu_nocbs=14-15"
+    }
+}
