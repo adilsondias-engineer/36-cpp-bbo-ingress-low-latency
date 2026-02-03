@@ -369,11 +369,13 @@ while (running) {
 | Shared Memory IPC | Implemented |
 | Warm-up | Implemented |
 | Benchmark Mode | Implemented |
-| Hardware Testing | Pending |
+| NASDAQ ITCH Testing | Tested and Benchmarked |
+| ASX ITCH Support | Pending |
+| B3 SBE Support | Pending |
 
 ---
 
 **Created:** January 2026
 **Last Updated:** February 3, 2026
 **Build Time:** ~15 seconds
-**Hardware Status:** Pending DPDK testing on Linux
+**Hardware Status:** NASDAQ ITCH tested and benchmarked; ASX and SBE implementations pending
